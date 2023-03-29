@@ -1,11 +1,13 @@
-import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
+import Sum from './components/Sum';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <View style={styles.titleContainer}>
+        <Text style={styles.title}>Welcome to the Sum App</Text>
+      </View>
+      <Sum/>
     </View>
   );
 }
@@ -17,4 +19,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
+  title: {
+    fontFamily: 'serif',
+    fontSize: 30,
+    fontWeight: 'bold',
+    textAlign: 'center'
+  },
+  titleContainer: {
+    flex: .2,
+    padding: 40,
+  }
 });
